@@ -12,9 +12,10 @@ project(${PROJECT_NAME})
 add_executable(${PROJECT_NAME} src/main.cpp)
 
 find_package(spdlog CONFIG REQUIRED)
+find_package(glad CONFIG REQUIRED)
 find_package(glfw3 CONFIG REQUIRED)
 
-set(EXTERNAL_LIBS spdlog::spdlog spdlog::spdlog_header_only glfw)
+set(EXTERNAL_LIBS spdlog::spdlog spdlog::spdlog_header_only glad::glad glfw)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE ${EXTERNAL_LIBS})
 
